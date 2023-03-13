@@ -144,5 +144,35 @@ namespace LinkedListPractice
             }
             Console.WriteLine(reverseString);
         }
+
+        public static List<int> FibbonacciSeries(int number)
+        {
+            //0 1 1 2 3 5 8 13 21 34
+            int current = 1; //1 2 
+            //int temp       //0 1
+            int last = 0;    //1 1
+            List<int> list = new List<int>(); //0 1 1 2
+            list.Add(last); list.Add(current);
+            for (int i = list.Count + 1; i <= number; i++)
+            {
+                current = current + last;
+                int temp = last;
+                last = current - temp;
+                list.Add(current);
+            }
+            return list;
+        }
+
+        public static int ReverseNumber(int number)
+        {
+            int reverse = 0;
+            while (number != 0)
+            {
+                int remainder = number % 10;
+                reverse = reverse * 10 + remainder;
+                number /= 10;
+            }
+            return reverse;
+        }
     }
 }
