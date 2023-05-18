@@ -145,22 +145,43 @@ namespace LinkedListPractice
             Console.WriteLine(reverseString);
         }
 
-        public static List<int> FibbonacciSeries(int number)
+        public void FibbonacciSeries(string key)
         {
-            //0 1 1 2 3 5 8 13 21 34
-            int current = 1; //1 2 
-            //int temp       //0 1
-            int last = 0;    //1 1
-            List<int> list = new List<int>(); //0 1 1 2
-            list.Add(last); list.Add(current);
-            for (int i = list.Count + 1; i <= number; i++)
-            {
-                current = current + last;
-                int temp = last;
-                last = current - temp;
-                list.Add(current);
-            }
-            return list;
+            // LOGIC 1
+            //if (LongRunningEvents.TryGetValue(key, out LongRunningEvent? longRunningEvent))
+            //    longRunningEvent.IsDelivered = true;
+
+            //int n1 = 0, n2 = 1, n3, number;
+            //Console.Write("Enter the number of elements: ");
+            //number = int.Parse(Console.ReadLine());
+            //Console.Write(n1 + "," + n2 + ","); //printing 0 and 1    
+            //for (int i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
+            //{
+            //    n3 = n1 + n2;
+            //    Console.Write(n3 + ",");
+            //    n1 = n2;
+            //    n2 = n3;
+            //}
+            //Console.Read();
+
+
+            // LOGIC 2
+
+            ////0 1 1 2 3 5 8 13
+            //int current = 1; //1 2 
+            ////int temp       //0 1
+            //int last = 0;    //1 1
+            //List<int> list = new List<int>(); //0 1 1 2
+            //list.Add(last); 
+            //list.Add(current);
+            //for (int i = list.Count + 1; i <= number; i++)
+            //{
+            //    current = current + last;
+            //    int temp = last;
+            //    last = current - temp;
+            //    list.Add(current);
+            //}
+            //return list;
         }
 
         public static int ReverseNumber(int number)

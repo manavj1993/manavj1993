@@ -8,33 +8,35 @@ using System.Text;
 
 namespace LinkedListPractice
 {
+
     class Program
     {
-        class MyClassA
-        {
-            public MyClassA()
-            {
-                Console.WriteLine("constructor A");
-            }
+        //class MyClassA
+        //{
+        //    public MyClassA()
+        //    {
+        //        Console.WriteLine("constructor A");
+        //    }
 
-            public void abc()
-            {
-                Console.WriteLine("A");
-            }
-        }
+        //    public void abc()
+        //    {
+        //        Console.WriteLine("A");
+        //    }
+        //}
 
-        class MyClassB : MyClassA
-        {
-            public MyClassB()
-            {
-                Console.WriteLine("constructor B");
-            }
+        //class MyClassB : MyClassA
+        //{
+        //    public MyClassB()
+        //    {
+        //        Console.WriteLine("constructor B");
+        //    }
 
-            public void abc()
-            {
-                Console.WriteLine("B");
-            }
-        }
+        //    public void abc()
+        //    {
+        //        Console.WriteLine("B");
+        //    }
+        //}
+
 
         static void Main(string[] args)
         {
@@ -44,9 +46,19 @@ namespace LinkedListPractice
 
 
             Logic logic = new Logic();
-            logic.ReverseString("Manav");
+            //logic.ReverseString("Manav");
             //logic.FindAllPrimeNumbersUptoGivenNumber();
-            //logic.GetArmstrongNumbers(1, 372);
+            //logic.GetArmstrongNumbers(1, 10000);
+            //logic.FibbonacciSeries("key1");
+
+            ArrayPractice arrayPractice = new ArrayPractice();
+            //arrayPractice.AddAndPrintArray(10);
+            //arrayPractice.FindMinimumAnd2ndMinimumElementFromArray();
+            //arrayPractice.FindMinAndMaxNumberFromArray();
+            //arrayPractice.Find2ndLargestAndMinimumNumber();
+            //arrayPractice.CountFrequenciesOfElementsInArray();
+            //arrayPractice.DeleteElementFromArrayAndSort();
+            arrayPractice.PracticeOnly();
             //logic.FindTwoSum(new List<int>() { 1, 3, 5, 7, 9 }, 12);
 
             //DoubleLinkedList 
