@@ -1,0 +1,10 @@
+[
+  {
+    "entityToCheck": "DynamoDB",
+    "entityLocator": "membership-table",
+    "arguments": "{ \"DynamoDBAccessKey\": \"\", \"DynamoDBSecretKey\": \"\", \"DynamoDBService\": \"http://localhost:4566\", \"Environment\": \"Development\" }",
+    "impactsLiveness": false,
+    "impactsReadiness": false,
+    "impactsStartup": true
+  }
+]

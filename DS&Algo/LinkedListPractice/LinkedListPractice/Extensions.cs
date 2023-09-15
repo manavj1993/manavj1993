@@ -29,5 +29,10 @@ namespace LinkedListPractice
             Array.Reverse(arr);
             return arr;
         }
+
+        public static bool IsGreaterThanOrEqualTo<T>(this T value, T other) where T : IComparable<T>
+        {
+            return value.CompareTo(other) >= 0;
+        }
     }
 }

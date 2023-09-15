@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DoubleLinkedListPractice
+namespace LinkedListPractice.LinkedList
 {
     public class Node
     {
@@ -13,26 +13,21 @@ namespace DoubleLinkedListPractice
 
     public class DoubleLinkedList
     {
-        static DateTime time;
         private Node head, tail;
 
         public void Add(int data)
         {
-            if (time == null)
-                Console.Write("");
-
             Node newItem = new Node()
             {
                 data = data
             };
 
-            if (head == null)
+            if (head == null) //Given that this will be the first entry
             {
                 head = newItem;
-                tail = head; //Since its first element, tail and head are same
+                tail = head;
             }
-            else
-            {
+            else { //For consecutive entries
                 tail.nextNode = newItem;
                 newItem.prevNode = tail;
                 tail = newItem;
@@ -47,6 +42,18 @@ namespace DoubleLinkedListPractice
             {
                 Console.WriteLine(current.data);
                 current = current.nextNode;
+            }
+            Console.WriteLine(current.data);
+        }
+
+        public void GetAllReverse()
+        {
+            Node current = tail;
+
+            while (current.prevNode != null)
+            {
+                Console.WriteLine(current.data);
+                current = current.prevNode;
             }
             Console.WriteLine(current.data);
         }

@@ -1,76 +1,111 @@
-﻿using SimpleGenericLinkedListPractice;
-using DoubleLinkedListPractice;
+﻿using LinkedListPractice.Algorithms;
+using LinkedListPractice.BinarySearchTree;
+using LinkedListPractice.RoughProblemSolving;
 using System;
-using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
+using LinkedListPractice.GeeksForGeeksPractice;
+using LinkedListPractice.LinkedList;
 
 namespace LinkedListPractice
 {
-
     class Program
     {
-        //class MyClassA
+        //public class classA
         //{
-        //    public MyClassA()
+        //    public virtual string Print()
         //    {
-        //        Console.WriteLine("constructor A");
-        //    }
-
-        //    public void abc()
-        //    {
-        //        Console.WriteLine("A");
+        //        return "classA";
         //    }
         //}
 
-        //class MyClassB : MyClassA
+        //public class classB : classA
         //{
-        //    public MyClassB()
+        //    public new string Print()
         //    {
-        //        Console.WriteLine("constructor B");
-        //    }
-
-        //    public void abc()
-        //    {
-        //        Console.WriteLine("B");
+        //        return "classB";
         //    }
         //}
 
+        //public class classC : classB
+        //{
+        //    public new string Print()
+        //    {
+        //        return "ClassC";
+        //    }
+        //}
 
         static void Main(string[] args)
         {
-            //MyClassA a = new MyClassB();
-            //MyClassA a = b;
-            //a.abc();
+            //classA a = new classB();
+            //Console.WriteLine(a.Print());
+            //ObserverClientClass.Function();
 
+            //Logic logic = new Logic();
 
-            Logic logic = new Logic();
             //logic.ReverseString("Manav");
             //logic.FindAllPrimeNumbersUptoGivenNumber();
             //logic.GetArmstrongNumbers(1, 10000);
             //logic.FibbonacciSeries("key1");
 
-            ArrayPractice arrayPractice = new ArrayPractice();
+            //ArrayPractice arrayPractice = new ArrayPractice();
+            //ArrayPractice.PrintNumberToSentence();
+            //ArrayPractice.GenerateLetterCombinations();
+            //ArrayPractice.RomanToNumeralConversion();
+            //arrayPractice.SearchKeyElementInArray();
             //arrayPractice.AddAndPrintArray(10);
             //arrayPractice.FindMinimumAnd2ndMinimumElementFromArray();
             //arrayPractice.FindMinAndMaxNumberFromArray();
             //arrayPractice.Find2ndLargestAndMinimumNumber();
             //arrayPractice.CountFrequenciesOfElementsInArray();
             //arrayPractice.DeleteElementFromArrayAndSort();
-            arrayPractice.PracticeOnly();
+            //arrayPractice.IncrementalCheck();
             //logic.FindTwoSum(new List<int>() { 1, 3, 5, 7, 9 }, 12);
 
-            //DoubleLinkedList 
+            //StackPractice.CheckIfStringPalindrome();
+            //BankOCR.MainFunction();
+            //MultiDelegateExample mde = new MultiDelegateExample();
+            //ArithOp arithOp = new ArithOp(mde.Subtract);
+            //arithOp += new ArithOp(mde.Add);
+            //arithOp(12, 4);
+            //arithOp -= new ArithOp(mde.Subtract);
+            //arithOp -= new ArithOp(mde.Subtract);
+            //arithOp(10, 4);
+            //arithOp -= new ArithOp(mde.Subtract);
+            //arithOp -= new ArithOp(mde.Subtract);
+            //arithOp -= new ArithOp(mde.Subtract);
+            //arithOp(10, 4);
+            //arithOp += new ArithOp(mde.Add);
+            //arithOp(10, 4);
+            //arithOp -= new ArithOp(mde.Add);
+            //arithOp -= new ArithOp(mde.Add);
+            //arithOp(10, 4);
+
+            //Binary Tree
+            //BinaryTree<int> bst = new BinaryTree<int>();
+            //bst.Add(15);
+            //bst.Add(7);
+            //bst.Add(8);
+            //bst.Add(10);
+            //bst.Add(16);
+            //bst.Add(19);
+            //bst.Add(20);
+            //bst.DisplayTree();
+
+
+            //Iterative Sorting
+            //SortingPractice.IterativeMethodSorting();
+            //SortingPractice.BubbleSort();
+            //SortingPractice.QuickSort();
+            //DoubleLinkedList .
             //{
-            //    DoubleLinkedList db = new DoubleLinkedList();
-            //    db.Add(1);
-            //    db.Add(2);
-            //    db.Add(3);
-            //    db.Add(4);
-            //    db.Add(5);
-            //    db.Add(6);
-            //    db.GetAll();
+            //DoubleLinkedList db = new DoubleLinkedList();
+            //db.Add(1);
+            //db.Add(2);
+            //db.Add(3);
+            //db.GetAll();
+            //db.GetAllReverse();
             //    int remove = 3;
             //    Console.WriteLine("Below is get all after removing a node value: " + remove.ToString());
             //    db.Remove(remove);
@@ -146,6 +181,12 @@ namespace LinkedListPractice
             //sll.Remove(4);
             //sll.ReadAll();
             //}
+
+            //Geeks For Geeks Practice
+            //GeeksForGeeks.LongestCommonSubsequence(6, 6, "ABCDGH", "AEDFHR");
+            //GeeksForGeeks.HasThreeIntegersWithSum();
+
+            SearchingAlgorithmsPractice.MainFunction();
         }
     }
 }

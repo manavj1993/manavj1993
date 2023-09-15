@@ -68,7 +68,7 @@ namespace LinkedListPractice
                 var sum = 0;
                 numberToDigits.ForEach<int>(item =>
                 {
-                    sum += item*item*item;
+                    sum += (int)Math.Pow(item, numberToDigits.Count()); //item*item*item;
                 });
                 if (sum.CompareTo(i) == 0)
                     list.Add(i);
@@ -83,12 +83,12 @@ namespace LinkedListPractice
 
         private IEnumerable<int> GetDigits(int number)
         {
-            Stack<int> stack = new Stack<int>();
+            Queue<int> stack = new Queue<int>();
             while (number != 0)
             {
                 var digit = number % 10;
                 number = number / 10;
-                stack.Push(digit);
+                stack.Enqueue(digit);
             }
             return stack;
         }
@@ -127,6 +127,7 @@ namespace LinkedListPractice
                 if (number % i == 0)
                 {
                     isPrime = false;
+                    break;
                 }
             }
             return isPrime;
@@ -145,24 +146,22 @@ namespace LinkedListPractice
             Console.WriteLine(reverseString);
         }
 
-        public void FibbonacciSeries(string key)
+        public void FibbonacciSeries()
         {
-            // LOGIC 1
-            //if (LongRunningEvents.TryGetValue(key, out LongRunningEvent? longRunningEvent))
-            //    longRunningEvent.IsDelivered = true;
+            //LOGIC 1
 
-            //int n1 = 0, n2 = 1, n3, number;
-            //Console.Write("Enter the number of elements: ");
-            //number = int.Parse(Console.ReadLine());
-            //Console.Write(n1 + "," + n2 + ","); //printing 0 and 1    
-            //for (int i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
-            //{
-            //    n3 = n1 + n2;
-            //    Console.Write(n3 + ",");
-            //    n1 = n2;
-            //    n2 = n3;
-            //}
-            //Console.Read();
+            int n1 = 0, n2 = 1, n3, number;
+            Console.Write("Enter the number of elements: ");
+            number = int.Parse(Console.ReadLine());
+            Console.Write(n1 + "," + n2 + ","); //printing 0 and 1    
+            for (int i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
+            {
+                n3 = n1 + n2;
+                Console.Write(n3 + ",");
+                n1 = n2;
+                n2 = n3;
+            }
+            Console.Read();
 
 
             // LOGIC 2

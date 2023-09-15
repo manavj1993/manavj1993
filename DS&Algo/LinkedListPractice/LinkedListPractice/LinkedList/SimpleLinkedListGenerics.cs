@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SimpleGenericLinkedListPractice
+namespace LinkedListPractice.LinkedList
 {
     public class Node<T>
     {
@@ -73,7 +73,7 @@ namespace SimpleGenericLinkedListPractice
             //Search for the key to be deleted using while loop and capture the previous as need to change current.next
             while (current != null && !current.data.Equals(data))
             {
-                previous = current;    
+                previous = current;
                 current = current.next;
             }
 
