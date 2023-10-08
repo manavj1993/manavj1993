@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Text;
 using LinkedListPractice.GeeksForGeeksPractice;
 using LinkedListPractice.LinkedList;
+using LinkedListPractice.HackerRankPractice;
 
 namespace LinkedListPractice
 {
@@ -51,6 +52,7 @@ namespace LinkedListPractice
 
             //ArrayPractice arrayPractice = new ArrayPractice();
             //ArrayPractice.PrintNumberToSentence();
+            //ArrayPractice.FindNthMaxMinFunction();
             //ArrayPractice.GenerateLetterCombinations();
             //ArrayPractice.RomanToNumeralConversion();
             //arrayPractice.SearchKeyElementInArray();
@@ -96,8 +98,10 @@ namespace LinkedListPractice
 
             //Iterative Sorting
             //SortingPractice.IterativeMethodSorting();
-            //SortingPractice.BubbleSort();
-            //SortingPractice.QuickSort();
+            //SortingAlgorithms.BubbleSort();
+            //SortingAlgorithms.QuickSort();
+            //SortingAlgorithms.QuickSortString();
+            //SortingAlgorithms.MergeSortMain();
             //DoubleLinkedList .
             //{
             //DoubleLinkedList db = new DoubleLinkedList();
@@ -111,18 +115,6 @@ namespace LinkedListPractice
             //    db.Remove(remove);
             //    db.GetAll();
             //    Console.Read();
-            //}
-
-            //What will be the output for this?
-            //{
-            //    int[] arr = new int[2];
-            //    arr[1] = 10;
-            //    object o = arr;
-            //    int[] arr1 = (int[])o;
-            //    arr1[1] = 100;
-            //    Console.WriteLine(arr[1]);
-            //    ((int[])o)[1] = 1000;
-            //    Console.WriteLine(arr[1]);
             //}
 
             //Logic for print 1 to 100 without using loop
@@ -186,7 +178,10 @@ namespace LinkedListPractice
             //GeeksForGeeks.LongestCommonSubsequence(6, 6, "ABCDGH", "AEDFHR");
             //GeeksForGeeks.HasThreeIntegersWithSum();
 
-            SearchingAlgorithmsPractice.MainFunction();
+            //SearchingAlgorithmsPractice.MainFunction();
+            //LinqPractice.MainFunction();
+
+            MakingAnagrams.MainFunction();
         }
     }
 }

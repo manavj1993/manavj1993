@@ -42,8 +42,7 @@ namespace LinkedListPractice
             Console.Write("Enter total number of elements in an array => ");
             int n = Convert.ToInt32(Console.ReadLine());
             int[] array = new int[n];
-            int flag = 0;
-            int output = 0;
+            int output = -1;
             Console.Write($"Enter any random {n} numbers comma(') separated => ");
             array = Console.ReadLine().Trim().Split(',', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray(); //Split by single space ' '
             Console.Write("Enter any number from above numbers => ");
@@ -58,13 +57,11 @@ namespace LinkedListPractice
                 if (array[i] == numberToFind)
                 {
                     output = i;
-                    Console.WriteLine($"The number {numberToFind} is at position {output + 1} of the array");
-                    flag = 1;
+                    
                     return;
                 }
             }
-            if (flag == 0)
-                Console.WriteLine($"Number {numberToFind} not found in the array");
+            Console.WriteLine($"The number {numberToFind} is at index position {output} of the array");
         }
 
         //Find minimum and 2nd minimum number of element in an array
@@ -338,5 +335,62 @@ namespace LinkedListPractice
             return total;
         }
 
+        //Write Program to find nth max and nth min from any array(rotated sorted or just sorted)
+        public static void FindNthMaxMinFunction()
+        {
+            int[] rotatedArray = { 134, 178, 13, 24, 34, 56, 57, 68, 78, 89, 90, 112 };
+            //Sorted array = { 13, 24, 34, 56, 57, 68, 78, 89, 90, 112, 134, 178 };
+            int n = 4; 
+
+            int nthMax = FindNthMax(rotatedArray, n); // 56
+            int nthMin = FindNthMin(rotatedArray, n); // 90
+            Console.WriteLine($"{n}th Max is {nthMax} & {n}th Min is {nthMin}");
+        }
+
+        private class MaxHeapComparer : IComparer<int>
+        {
+            public int Compare(int a, int b)
+            {
+                return b.CompareTo(a);
+            }
+        }
+
+        private class MinHeapComparer : IComparer<int>
+        {
+            public int Compare(int a, int b)
+            {
+                return a.CompareTo(b);
+            }
+        }
+
+        private static int FindNthMax(int[] arr, int n)
+        {
+            if (n < 0 && arr.Length == 0)
+                throw new ArgumentException("Incorrect input");
+
+            var maxHeap = new PriorityQueue<int, int>(new MaxHeapComparer());
+            foreach (int a in arr)
+            {
+                maxHeap.Enqueue(a, a);
+                if (maxHeap.Count > n)
+                        maxHeap.Dequeue();
+            }
+            return maxHeap.Peek();
+        }
+
+        private static int FindNthMin(int[] arr, int n)
+        {
+            if (n < 0 && arr.Length == 0)
+                throw new ArgumentException("Incorrect input");
+
+            var minHeap = new PriorityQueue<int, int>(new MinHeapComparer());
+            foreach (int a in arr)
+            {
+                minHeap.Enqueue(a, a);
+                if (minHeap.Count > n)
+                    minHeap.Dequeue();
+            }
+            return minHeap.Peek();
+        }
     }
 }
